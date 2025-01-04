@@ -1,0 +1,215 @@
+@font-face {
+  font-family: 'Neue Regrade';
+  src: url('fonts/Neue-Regrade.ttf') format('truetype');
+  font-style: normal;
+}
+
+:root
+{
+  --titleFont: "Neue Regrade", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --bodyFont: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  --color-background: #2E282A;
+  --color-panel-white: rgba(255, 255, 255, .4);
+  --color-panel-black: rgba(0, 0, 0, .4);
+  --color-text-base: #FFFFFF;
+  --color-text-primary: #EF3E36;
+  --color-text-secondary: #17BEBB;
+
+  --border-default: 25px;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--titleFont);
+  font-weight: 900;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+body, html {
+  font-family: var(--bodyFont);
+  font-size: 16px;
+  font-weight: lighter;
+  color: var(--color-text-base);
+  background: var(--color-background);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: var(--color-text-base);
+  text-align: center;
+  font-size: 84px;
+  letter-spacing: -1.5px;
+  line-height: 1;
+  padding: 6rem 0 4rem;
+}
+
+h2 {
+  color: var(--color-text-base);
+  font-size: 36px;
+  line-height: 1;
+}
+
+h3 {
+  color: var(--color-text-base);
+  font-size: 24px;
+  line-height: 1;
+}
+
+.col-h {
+  display: flex;
+  justify-content: center;
+}
+
+.m-b {
+  margin-bottom: 50px;
+}
+
+.m-t {
+  margin-top: 50px;
+}
+
+.m-l {
+  margin-left: 50px;
+}
+
+.m-r {
+  margin-right: 50px;
+}
+
+.tulisan {
+  position: relative;
+  z-index: 0;
+}
+
+.box {
+  top: -10px;
+  left: 15px;
+  width: var(--w, 25px);
+  height: var(--h, 25px);
+  border: var(--stroke, 5px) solid var(--color-text-secondary);
+  z-index: -1;
+  position: absolute;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.badge-container {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Supaya badge berbaris ke bawah jika terlalu banyak */
+  gap: 5px; /* Jarak antar badge */
+}
+
+.badge {
+  background-color: rgba(255, 255, 255, .4);
+  color: var(--color-background);
+  padding: 7px 15px;
+  border-radius: 5px;
+}
+
+.badge-stiker {
+  padding: 2px 15px;
+  font-size: small;
+  color: var(--color-text-base);
+  background-color: var(--color-text-secondary);
+  transform: rotate(var(--badge-rotation, 0deg));
+}
+
+.profile-image {
+  width: 350px;
+  height: 350px;
+  object-position: 85%;
+  border: 2px solid var(--color-text-base);
+  display: block;
+  object-fit: cover;
+  position: relative;
+}
+
+.paper-pile {
+  width: 350px;
+  height: 350px;
+  background-color: var(--color-text-base);
+  transform: rotate(5deg);
+  position: absolute;
+}
+
+.level-bar-container {
+  width: 100%;
+  height: 8px;
+  background-color: var(--color-text-base);
+  margin: 5px 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.level-bar {
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-text-secondary);
+  transition: width 0.3s ease;
+}
+
+.footer {
+  background-color: var(--color-panel-black);
+  color: var(--color-text-base);
+  padding: 20px 10px;
+  border-top: 1px solid var(--color-text-base);
+}
+
+.contact-info a {
+  display: inline-block;
+  margin: 10px;
+  text-decoration: none;
+  color: var(--color-text-base);
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+  color: var(--color-text-primary);
+}
+
+.contact-info i {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.panel {
+  background-color: var(--color-panel-white);
+  border-radius: var(--border-default);
+  height: 1000px;
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 48px;
+    padding: 4rem 0 2rem;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+}
+
+.bg-1 {
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.bg-2 {
+  background-color: var(--color-panel-white);
+  border-radius: 5%;
+}
